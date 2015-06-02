@@ -1,3 +1,6 @@
+/*請貼上fackbook初始化的相關程式碼*/
+/*https://developers.facebook.com/*/
+
 window.fbAsyncInit = function() {
 	FB.init({
 		      appId      : '1616729421906225',
