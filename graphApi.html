@@ -14,6 +14,16 @@
     <!--https://developers.facebook.com/docs/graph-api/using-graph-api/v2.3-->	
     <script src="js/key.js"></script>		   
 	<script>
+	var a = setTimeout(function(){
+		FB.api(
+		    "/me",
+		    function (response) {
+		      if (response && !response.error) {
+		          console.log(response);
+		      }
+		    }
+		);
+	},3000);
 	
 
 

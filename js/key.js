@@ -18,11 +18,3 @@ window.fbAsyncInit = function() {
  }(document, 'script', 'facebook-jssdk'));
 
 
-FB.api(
-    "/me",
-    function (response) {
-      if (response && !response.error) {
-          console.log(response);
-      }
-    }
-);
