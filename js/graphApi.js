@@ -6,7 +6,7 @@ $(document).ready(function(){
 	else{
 		loginView();
 	}
-}
+});
 function loginView(){
 	$('article').fadeOut();
 }
