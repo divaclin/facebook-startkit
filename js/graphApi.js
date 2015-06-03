@@ -27,7 +27,7 @@ $(document).on('click','#logoutBtn',function(e){
 });
 function loginView(){
 	$('#logoutBtn').hide();
-	
+	$('#indexView').hide();
 	
 	$('#loginView').show();
 	$('.notLogin').show();
@@ -39,6 +39,7 @@ function indexView(){
 	$('#loginView').hide();
 	$('.notLogin').hide();
 	
+	$('#indexView').show();
 	$('#logoutBtn').show();
 	$('body').css("background-image","url(img/index.jpg)");
 	

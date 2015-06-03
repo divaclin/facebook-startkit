@@ -14,7 +14,9 @@
 	<body>
 	    <header><p class="notLogin">未登入</p><button id="logoutBtn" class="btn btn-danger">登出</button></header>	
 	    <article>
-			<div id="fbImgView"></div>
+			<div id="indexView">
+			   <div id="fbImgView"></div>
+		    </div>
 	    	<form id="loginView">
 				  <label>username:<input class="form-control" id="username" type="text" placeholder="請輸入使用者名稱..."></label>
 				  <label>password:<input class="form-control" id="password" type="password" placeholder="請輸入密碼..."></label>
@@ -69,7 +71,7 @@
 			    } else {
 			      alert("透過臉書登入成功");
 			    }
-				indexView();
+				indexView();//切換至預先寫好登入後的介面
 				FB.getLoginStatus(function(response) {
 				     if (response.status === 'connected') {
 				         uid = response.authResponse.userID;
@@ -77,12 +79,7 @@
 				         FB.api('/me/picture?type=large', function (response) {
 						    $('#fbImgView').html("<h5>Here are your profile photo</h5><img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
 				         });
-					/*  FB.api("/me/picture/likes",function (response) {
-						  console.log(response);
-						  $('#UserImg').append("<p>"+response.data.count+"people liked this picture</p>");
-					  });*/
-				    //呼叫api把圖片放到#preview IMG tag 內
-				  }
+				     }
 			     }); 
 			  },
 			  error: function(user, error) {

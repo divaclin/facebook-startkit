@@ -20,12 +20,20 @@ header p{
 	margin-right:45px;
 	display:none;
 }
-#loginView,#logoutBtn{
+#indexView,#loginView,#logoutBtn{
 	display:none;
 }
 #fbImgView{
 	margin:0 auto;
 	text-align:center;
+	width:300px;
+	height:300px;
+}
+#indexView{
+	margin:50px auto;
+	width:500px;
+	height:500px;
+	background:rgba(255,255,255,0.8);
 }
 #loginView{
 	margin:50px auto;
