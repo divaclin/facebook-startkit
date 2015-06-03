@@ -25,6 +25,7 @@ header p{
 }
 #fbImgView{
 	margin:0 auto;
+	text-align:center;
 }
 #loginView{
 	margin:50px auto;

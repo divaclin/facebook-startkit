@@ -2,6 +2,15 @@ $(document).ready(function(){
 	var current = Parse.User.current();
 	if(current){
 	    indexView();
+		FB.getLoginStatus(function(response) {
+		     if (response.status === 'connected') {
+		         uid = response.authResponse.userID;
+		         accessToken = response.authResponse.accessToken;
+		         FB.api('/me/picture?type=large', function (response) {
+				    $('#fbImgView').html("<h5>Here are your profile photo</h5><img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
+		         });
+		     }
+	     });
 	}
 	else{
 		loginView();
