@@ -12,7 +12,7 @@
 		  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
 	</head>
 	<body>
-	    <header><p class="notLogin">未登入</p><button class="isLogin btn btn-danger">登出</button></header>	
+	    <header><p class="notLogin">未登入</p><button id="logoutBtn" class="isLogin btn btn-danger">登出</button></header>	
 	    <article>
 	    	<form id="loginView">
 				  <label>username:<input class="form-control" id="username" type="text" placeholder="請輸入使用者名稱..."></label>
@@ -37,7 +37,6 @@
            version    : 'v2.3' // point to the latest Facebook Graph API version
         });
           
-
           // Run code after the Facebook SDK is loaded.
         };
 
@@ -49,8 +48,38 @@
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 		
-		
-		
+		function login(){
+	  	  Parse.User.logIn($('#username').val(),$('#password').val(),{
+	  		  success:function(data){
+	  		  	  alert("登入成功");
+		          indexView();
+	  		  },
+	  		  error:function(data,error){
+	  			  alert("登入失敗");
+	  		  }
+	  	  });
+		}
+		function signup(){
+	  	  var user = new Parse.User();
+	  	  user.set("username",$('#username').val());
+	  	  user.set("password",$('#password').val());
+	  	  user.signUp(null,{
+	  		  success: function(user){
+	  			  alert("註冊成功");
+				  indexView();
+	  		  },
+	  		  error: function(data,error){
+	  			  alert("註冊失敗");
+	  		  }
+	  	  }); 
+		}
+		function logout(){
+	  	   Parse.User.logOut();
+		   loginView();	
+		}
+		function fblogin(){
+			
+		}
 		
 	</script>
     <script src="js/graphApi.js"></script>		   	
