@@ -4,7 +4,7 @@ $(document).ready(function(){
 	
 	}
 	else{
-		loginView();
+		//loginView();
 	}
 });
 function loginView(){
