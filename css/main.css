@@ -1,7 +1,7 @@
 body{
 	width:100vw;
 	height:100vh;
-	background:url('../img/background.jpg');
+	background:#fff;
 	background-size:100vw 100vh;
 	background-repeat: no-repeat;
 	overflow-x:hidden;
