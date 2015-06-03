@@ -35,8 +35,10 @@ header p{
 	margin-top:5px;
 }
 #fbImgView h1{
-	margin-top:60px;
+	width:500px;
+	margin:60px auto;
 	font-size:30px;
+	text-align:left;
 }
 #indexView{
 	margin:50px auto;
