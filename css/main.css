@@ -2,6 +2,7 @@ body{
 	width:100vw;
 	height:100vh;
 	background-image:url('img/img.png');
+	background-image-size:100vw 100vh;
 }
 header{
 	width:100vw;
