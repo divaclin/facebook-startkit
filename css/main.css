@@ -13,6 +13,10 @@ article{
 	background:#fff;
 	margin:200px auto;
 }
+form{
+	height:300px;
+}
 #username,#password{
 	display:block;
+	width:300px;
 }
