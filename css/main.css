@@ -11,7 +11,7 @@ article{
 	width:500px;
 	height:500px;
 	background:rgba(255,255,255,0.8);
-	margin:200px auto;
+	margin:100px auto;
 }
 form{
 	width:400px;
@@ -23,5 +23,5 @@ label{
 #username,#password{
 	display:block;
 	margin:5px auto;
-	width:300px;
+	width:350px;
 }
