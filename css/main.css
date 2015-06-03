@@ -18,6 +18,9 @@ header p{
 #loginView,#logoutBtn{
 	display:none;
 }
+#loginView{
+	margin:0 auto;
+}
 article{
 	width:500px;
 	height:500px;
