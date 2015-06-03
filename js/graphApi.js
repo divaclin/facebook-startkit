@@ -30,13 +30,14 @@ function loginView(){
 	
 	$('#loginView').show();
 	$('.notLogin').show();
-	$('body').css("background-image","url(/img/index.jpg)");
 }
 function indexView(){
 	$('#loginView').hide();
 	$('.notLogin').hide();
 	
 	$('#logoutBtn').show();
+	$('body').css("background-image","url(img/index.jpg)");
+	
 }
 
 function login(){
