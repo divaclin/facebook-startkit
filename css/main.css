@@ -3,6 +3,9 @@ body{
 	height:100vh;
 	background:url('../img/background.jpg');
 	background-size:100vw 100vh;
+	background-repeat: no-repeat;
+	overflow-x:hidden;
+	overflow-y:hidden;
 }
 header{
 	width:100vw;
