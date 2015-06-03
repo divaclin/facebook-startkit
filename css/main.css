@@ -22,7 +22,11 @@ header p{
 }
 #loginView{
 	margin:50px auto;
-	background:rgba(255,255,255,0.8);	
+	padding-top:55px;
+	padding-left:25px;
+	background:rgba(255,255,255,0.8);
+	width:400px;
+	height:330px;	
 }
 #logoutBtn{
 	float:right;
@@ -32,11 +36,7 @@ header p{
 article{
 	width:100vw;
 	height:100vh;
-	margin:100px auto;
-}
-form{
-	width:400px;
-	height:400px;
+	margin:50px auto;
 }
 label{
 	font-size:20px;
