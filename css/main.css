@@ -1,7 +1,7 @@
 body{
 	width:100vw;
 	height:100vh;
-	background:url('img/background.jpg');
+	background:url('../img/background.jpg');
 	
 }
 header{
