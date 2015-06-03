@@ -15,6 +15,9 @@ header p{
 	margin-right:45px;
 	display:none;
 }
+#loginView{
+	display:none;
+}
 article{
 	width:500px;
 	height:500px;
