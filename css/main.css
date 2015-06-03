@@ -21,6 +21,11 @@ header p{
 #loginView{
 	margin:0 auto;
 }
+#logoutBtn{
+	float:right;
+	margin-left:45px;
+	margin-top:8px;
+}
 article{
 	width:500px;
 	height:500px;
