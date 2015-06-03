@@ -8,8 +8,10 @@ header{
 	background:rgba(0,0,0,0.8);
 }
 header p{
+	font-size:18px;
 	float:right;
 	color:#fff;
+	line-height:50px;
 }
 article{
 	width:500px;
