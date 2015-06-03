@@ -74,5 +74,8 @@ function signup(){
 }
 function logout(){
    Parse.User.logOut();
+   FB.logout(function(response) {
+     // user is now logged out
+   });
    loginView();	
 }
