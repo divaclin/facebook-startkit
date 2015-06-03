@@ -16,7 +16,11 @@ article{
 form{
 	height:300px;
 }
+label{
+	font-size:20px;
+}
 #username,#password{
 	display:block;
+	margin:5px auto;
 	width:300px;
 }
