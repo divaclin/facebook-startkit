@@ -21,7 +21,8 @@ header p{
 	display:none;
 }
 #loginView{
-	margin:0 auto;
+	margin:50px auto;
+	background:rgba(255,255,255,0.8);	
 }
 #logoutBtn{
 	float:right;
@@ -29,9 +30,8 @@ header p{
 	margin-top:8px;
 }
 article{
-	width:500px;
-	height:500px;
-	background:rgba(255,255,255,0.8);
+	width:100vw;
+	height:100vh;
 	margin:100px auto;
 }
 form{
