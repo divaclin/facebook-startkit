@@ -50,6 +50,7 @@ function login(){
 	  success:function(data){
 	  	  alert("登入成功");
           indexView();
+		  $('#fbImgView').append("<p>hello "+data.get("username")+", how about trying FB login ?</p>");
 	  },
 	  error:function(data,error){
 		  alert("登入失敗");
@@ -64,6 +65,7 @@ function signup(){
 	  success: function(user){
 		  alert("註冊成功");
 		  indexView();
+		  $('#fbImgView').append("<p>hello "+data.get("username")+", how about trying FB login ?</p>");
 	  },
 	  error: function(data,error){
 		  alert("註冊失敗");
