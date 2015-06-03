@@ -5,7 +5,11 @@ body{
 header{
 	width:100vw;
 	height:50px;
-	background:#ff0000;
+	background:rgba(0,0,0,0.8);
+}
+header p{
+	float:right;
+	color:#fff;
 }
 article{
 	width:500px;
