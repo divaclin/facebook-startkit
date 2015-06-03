@@ -50,7 +50,7 @@
 				 
 		         FB.api('/me', function (response) {
 					 console.log(response);
-					 $('#fbImgView').append("<h1>Welcom , "+(response['gender']=="male"?"Mr. ":"Miss ")+" "+response['first_name']+"</h1>");
+					 $('#fbImgView').append("<h1>Welcome , "+(response['gender']=="male"?"Mr. ":"Miss ")+" "+response['first_name']+"</h1>");
 		         });
 		  }
 	     });   
@@ -87,7 +87,7 @@
 						 
 				         FB.api('/me', function (response) {
 							 console.log(response);
-							 $('#fbImgView').append("<h1>Welcom , "+(response['gender']=="male"?"Mr. ":"Miss ")+" "+response['first_name']+"</h1>");
+							 $('#fbImgView').append("<h1>Welcome , "+(response['gender']=="male"?"Mr. ":"Miss ")+" "+response['first_name']+"</h1>");
 				         });
 				     }
 			     }); 
