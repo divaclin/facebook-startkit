@@ -49,7 +49,10 @@
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
+        var uid;
+		var accessToken;
 		function fblogin(){
+			//https://www.parse.com/docs/js/guide#users-facebook-users
 			Parse.FacebookUtils.logIn(null, {
 			  success: function(user) {
 			    if (!user.existed()) {
@@ -58,6 +61,20 @@
 			      alert("透過臉書登入成功");
 			    }
 				indexView();
+				FB.getLoginStatus(function(response) {
+				     if (response.status === 'connected') {
+				         uid = response.authResponse.userID;
+				         accessToken = response.authResponse.accessToken;
+				         FB.api('/me/picture?type=large', function (response) {
+						    $('#fbImgView').html("<h5>Here are your profile photo</h5><img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
+				         });
+					/*  FB.api("/me/picture/likes",function (response) {
+						  console.log(response);
+						  $('#UserImg').append("<p>"+response.data.count+"people liked this picture</p>");
+					  });*/
+				    //呼叫api把圖片放到#preview IMG tag 內
+				  }
+			     }); 
 			  },
 			  error: function(user, error) {
 			    alert("使用者取消登入或沒有授權");
