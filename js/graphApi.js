@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	var current = Parse.User.current();
+	console.log(current);
 	if(current){
 	    indexView();
 	}
