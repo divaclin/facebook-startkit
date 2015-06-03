@@ -13,6 +13,7 @@ header p{
 	color:#fff;
 	line-height:50px;
 	margin-right:45px;
+	display:none;
 }
 article{
 	width:500px;

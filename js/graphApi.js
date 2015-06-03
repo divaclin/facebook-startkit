@@ -9,6 +9,7 @@ $(document).ready(function(){
 });
 function loginView(){
 	$('#loginView').show();
+	$('.notLogin').show();
 }
 function indexView(){
 	
