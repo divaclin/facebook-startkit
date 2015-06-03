@@ -13,3 +13,6 @@ article{
 	background:#fff;
 	margin:200px auto;
 }
+#username,#password{
+	display:block;
+}
