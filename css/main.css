@@ -23,6 +23,9 @@ header p{
 #loginView,#logoutBtn{
 	display:none;
 }
+#fbImgView{
+	margin:0 auto;
+}
 #loginView{
 	margin:50px auto;
 	padding-top:55px;
