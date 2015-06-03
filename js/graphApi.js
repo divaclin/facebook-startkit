@@ -8,19 +8,19 @@ $(document).ready(function(){
 	}
 });
 
-$(document).on('#loginBtn','click',function(e){
+$(document).on('submit','#loginBtn',function(e){
 	e.preventDefault();
 	login();
 });
-$(document).on('#signupBtn','click',function(e){
+$(document).on('submit','#signupBtn',function(e){
 	e.preventDefault();
 	signup();
 });
-$(document).on('#fbloginBtn','click',function(e){
+$(document).on('submit','#fbloginBtn',function(e){
 	e.preventDefault();
 	fblogin();
 });
-$(document).on('#logoutBtn','click',function(e){
+$(document).on('submit','#logoutBtn',function(e){
 	e.preventDefault();
 	logout();
 });
