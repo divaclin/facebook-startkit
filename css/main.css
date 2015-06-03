@@ -2,6 +2,11 @@ body{
 	width:100vw;
 	height:100vh;
 }
+header{
+	width:100vw;
+	height:55px;
+	background:#000;
+}
 article{
 	width:500px;
 	height:500px;
