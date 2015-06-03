@@ -8,22 +8,62 @@ $(document).ready(function(){
 	}
 });
 
-$(document).on('#loginBtn','click',function(){
+$(document).on('#loginBtn','click',function(e){
+	e.preventDefault();
 	login();
 });
-$(document).on('#signupBtn','click',function(){
+$(document).on('#signupBtn','click',function(e){
+	e.preventDefault();
 	signup();
 });
-$(document).on('#fbloginBtn','click',function(){
+$(document).on('#fbloginBtn','click',function(e){
+	e.preventDefault();
 	fblogin();
 });
-$(document).on('#logoutBtn','click',function(){
+$(document).on('#logoutBtn','click',function(e){
+	e.preventDefault();
 	logout();
 });
 function loginView(){
+	$('#logoutBtn').hide();
+	
+	
 	$('#loginView').show();
 	$('.notLogin').show();
 }
 function indexView(){
+	$('#loginView').hide();
+	$('.notLogin').hide();
 	
+	$('#logoutBtn').show();
+}
+
+function login(){
+  Parse.User.logIn($('#username').val(),$('#password').val(),{
+	  success:function(data){
+	  	  alert("登入成功");
+          indexView();
+	  },
+	  error:function(data,error){
+		  alert("登入失敗");
+	  }
+  });
+}
+function signup(){
+  var user = new Parse.User();
+  user.set("username",$('#username').val());
+  user.set("password",$('#password').val());
+  user.signUp(null,{
+	  success: function(user){
+		  alert("註冊成功");
+		  indexView();
+	  },
+	  error: function(data,error){
+		  alert("註冊失敗");
+	  }
+  }); 
+}
+function logout(){
+   Parse.User.logOut();
+   loginView();	
 }

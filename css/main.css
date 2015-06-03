@@ -15,7 +15,7 @@ header p{
 	margin-right:45px;
 	display:none;
 }
-#loginView,.isLogin{
+#loginView,#logoutBtn{
 	display:none;
 }
 article{
