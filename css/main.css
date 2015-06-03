@@ -10,11 +10,12 @@ header{
 article{
 	width:500px;
 	height:500px;
-	background:#fff;
+	background:rgba(255,255,255,0.8);
 	margin:200px auto;
 }
 form{
-	height:300px;
+	width:400px;
+	height:400px;
 }
 label{
 	font-size:20px;
