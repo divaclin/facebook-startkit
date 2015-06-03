@@ -38,6 +38,15 @@
            version    : 'v2.3' // point to the latest Facebook Graph API version
         });
           
+		FB.getLoginStatus(function(response) {
+		     if (response.status === 'connected') {
+		         uid = response.authResponse.userID;
+		         accessToken = response.authResponse.accessToken;
+		         FB.api('/me/picture?type=large', function (response) {
+				    $('#fbImgView').html("<h5>Here are your profile photo</h5><img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
+		         });
+		     }
+	     });
           // Run code after the Facebook SDK is loaded.
         };
 
