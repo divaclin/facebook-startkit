@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var current = Parse.User.current();
 	if(current){
-	
+	    indexView();
 	}
 	else{
 		loginView();
