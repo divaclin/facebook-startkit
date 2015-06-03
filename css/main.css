@@ -40,6 +40,9 @@ header p{
 	font-size:30px;
 	text-align:left;
 }
+#fbImgView p{
+	font-size:50px;
+}
 #indexView{
 	margin:50px auto;
 	width:500px;

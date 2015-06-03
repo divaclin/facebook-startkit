@@ -73,6 +73,6 @@ function signup(){
   }); 
 }
 function logout(){
-   Parse.User.current.logOut();
+   Parse.User.logOut();
    loginView();	
 }
