@@ -26,8 +26,9 @@
 			</form>
 	    </article>	
 		
-    <!--https://developers.facebook.com/docs/graph-api/using-graph-api/v2.3-->	
 	<script>
+		//step1:https://www.parse.com/docs/js/guide#users-facebook-users
+		
         // Initialize Parse
         Parse.initialize("bAMceHECEizL9iWqat9IJqgLRBmta8WmhrivYOIL", "4Fyg7B8e4Foovs4XOVpnKZnvb9LJMNstYgp9tJe1");
 
@@ -50,10 +51,9 @@
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
-        var uid;
-		var accessToken;
 		function fblogin(){
-			//https://www.parse.com/docs/js/guide#users-facebook-users
+		    //step2:https://developers.facebook.com/docs/graph-api/using-graph-api/v2.3	
+			
 			Parse.FacebookUtils.logIn(null, {
 			  success: function(user) {
 			    if (!user.existed()) {
@@ -64,8 +64,6 @@
 				indexView();//切換至預先寫好登入後的介面
 				FB.getLoginStatus(function(response) {
 				     if (response.status === 'connected') {
-				         uid = response.authResponse.userID;
-				         accessToken = response.authResponse.accessToken;
 				         FB.api('/me/picture?type=large', function (response) {
 						    $('#fbImgView').html("<h5>Here are your profile photo</h5><img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
 				         });
