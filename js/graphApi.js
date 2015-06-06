@@ -16,13 +16,6 @@ $(document).ready(function(){
 						 $('#fbImgView').append("<h1>Welcome , "+(response['gender']=="male"?"Mr. ":"Miss ")+" "+response['first_name']+"</h1>");
 			         });
 					 
-					 FB.api('/me/feed', 'post', { message: body }, function(response) {
-					   if (!response || response.error) {
-					     alert('Error occured');
-					   } else {
-					     alert('Post ID: ' + response.id);
-					   }
-					 });
 			  }
 		     });   
 	    },3000);
