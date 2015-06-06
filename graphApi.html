@@ -53,7 +53,32 @@
 
 		function fblogin(){
 		    //step2:https://developers.facebook.com/docs/graph-api/using-graph-api/v2.3	
-
+			
+			Parse.FacebookUtils.logIn(null, {
+			  success: function(user) {
+			    if (!user.existed()) {
+			      alert("註冊完成並且透過臉書登入");
+			    } else {
+			      alert("透過臉書登入成功");
+			    }
+				indexView();//切換至預先寫好登入後的介面
+				FB.getLoginStatus(function(response) {
+				     if (response.status === 'connected') {
+				         FB.api('/me/picture?type=large', function (response) {
+						    $('#fbImgView').html("<h5>Here are your profile photo</h5><img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
+				         });
+						 
+				         FB.api('/me', function (response) {
+							 console.log(response);
+							 $('#fbImgView').append("<h1>Welcome , "+(response['gender']=="male"?"Mr. ":"Miss ")+" "+response['first_name']+"</h1>");
+				         });
+				     }
+			     }); 
+			  },
+			  error: function(user, error) {
+			    alert("使用者取消登入或沒有授權");
+			  }
+			});
 		}
 		
 	</script>
