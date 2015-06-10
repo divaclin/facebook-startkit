@@ -57,6 +57,12 @@
 				 } else {
 				 alert("User logged in through Facebook!");
  			       }
+ 			        indexView(); //這是預先寫好的控制版⾯的function，⾮臉書api
+                                FB.getLoginStatus(function(response) {
+                                if (response.status === 'connected') {
+                                    //等等要在這邊加程式碼 使⽤FB.api()
+                                 }
+                                 });
  				//等等要在這邊加程式碼 FB.getLoginStatus
  				},
  				error: function(user, error) {
