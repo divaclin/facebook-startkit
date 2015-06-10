@@ -50,7 +50,19 @@
        
 		function fblogin(){
 		//step2:https://developers.facebook.com/docs/graph-api/using-graph-api/v2.3	
-			
+			Parse.FacebookUtils.logIn(null, {
+                                success: function(user) {
+                               if (!user.existed()) {
+ 				alert("User signed up and logged in through Facebook!");
+				 } else {
+				 alert("User logged in through Facebook!");
+ 			       }
+ 				//等等要在這邊加程式碼 FB.getLoginStatus
+ 				},
+ 				error: function(user, error) {
+ 				alert("User cancelled the Facebook login or did not fully authorize.");
+ 				}
+				});
 		}
 		
 	</script>
