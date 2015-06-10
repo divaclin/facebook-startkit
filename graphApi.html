@@ -61,6 +61,15 @@
                                 FB.getLoginStatus(function(response) {
                                 if (response.status === 'connected') {
                                     //等等要在這邊加程式碼 使⽤FB.api()
+                                     FB.api('/me/picture?type=large',function(response) {
+ $('#fbImgView').html("<h5>Here are your profile photo</h5><img
+src="+response.data.url+"crossorigin=\"anonymous\" id=preview1 / >");
+ });
+//個⼈資訊
+ FB.api('/me',function(response) {
+ $('#fbImgView').append("<h1>Welcome ,+(response['gender']=="male"?"Mr. ":"Miss ")
++" "+response['first_name']+"</h1>");
+ });
                                  }
                                  });
  				//等等要在這邊加程式碼 FB.getLoginStatus
